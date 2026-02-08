@@ -17,19 +17,15 @@ Scenes are kept in different folders. This means that different people can work 
 > [!Note]
 > When scenes load at runtime, their **child scenes aren't automatically loaded too**. You have to load child scenes in code. For more information, see [Load scenes](load-scenes.md).
 
-## Set parent and child scenes
+## Set child scenes
 
 The relationship between parent and child scenes is set on the child, not the parent. In other words, child scenes know about their parent scenes, but parent scenes don't know about their child scenes.
 
-There are several ways to make a scene a child of another scene:
+To make a scene a child of another scene drag the scene from the **Asset View** (bottom by default) onto the scene you want to make its parent in the **Entity Tree**.
 
-* In the Scene Editor **Entity Tree** (left by default), drag the scene onto the scene you want to make its parent.
-
-* Drag the scene from the **Asset View** (bottom by default) onto the scene you want to make its parent in the **Entity Tree**.
-
-* In the scene **Property Grid** (on the right by default), next to **Parent**, specify the scene you want to be the scene's parent.
-
-    ![Properties parent scene](media/properties-parent-scene.png)
+<video controls autoplay loop height="240" width="320">
+                <source src="media/set-child-scene.mp4" type="video/mp4">
+</video>
 
 ## Set the default scene
 
