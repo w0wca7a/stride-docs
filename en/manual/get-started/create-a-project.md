@@ -39,7 +39,7 @@ To create an empty project:
 
 6. Under **Platforms**, select the platforms you want your game to support.  
 
-    >[!Note]
+    >[!NOTE]
     >To support iOS and Android, you need to install <a href="https://www.xamarin.com/studio" target="_blank">Xamarin</a> (free if you have Visual Studio).
     >If your development system is missing prerequisites for any of the platforms you select, Stride displays a warning.
 
@@ -49,10 +49,10 @@ To create an empty project:
     
     **Graphics API:** The graphics features you can use in your project depend on the API you select. For advanced graphics features, select the latest version of the graphics APIs.
     
-    >[!Warning]
-    >Some graphics cards don't support the latest APIs. For some mobile devices, only Direct3D 9.3 / OpenGL ES 2.0 and Direct3D 10.0 / OpenGL ES 3.0 are available.
+    > [!WARNING]
+    > Some graphics cards don't support the latest APIs. For some mobile devices, only **Level 9.3** and **Level 10.0** graphics profiles are available.
 
-    **High or Low Dynamic Range (HDR / LDR):** This defines how color is computed in your project. In LDR mode, colors range from 0 to 1. In HDR mode colors can take any float value. HDR provides more advanced and realistic rendering but requires more processing power and profile Direct3D 10.0 / OpenGL ES 3.0 or later.
+    **High or Low Dynamic Range (HDR / LDR):** This defines how color is computed in your project. In LDR mode, colors range from 0 to 1. In HDR mode colors can take any float value. HDR provides more advanced and realistic rendering but requires more processing power and profile **Level 10.0** or later.
 
 9. Under **Orientation**, choose the orientation for your project. For PC games, use landscape. Portrait should usually only be used for mobile games.
 
@@ -82,8 +82,54 @@ To create a project from a sample or template:
     	
  5. Select the platforms you want your game to support and click **OK**.
 
-Stride creates the project and opens it in Game Studio. 
+Stride creates the project and opens it in Game Studio.
 
-## What's next?
+## Create a project without Game Studio
 
-* [Get familiar with Game Studio](../game-studio/index.md)
+Stride allows you to create new projects from the command line using the `dotnet` command.
+
+1. Before starting, make sure to install the project templates from nuget.
+
+    ```bash
+    dotnet new install Stride.Templates.Games
+    ```
+
+2. Find the template you want to use. The default project template is named `stride-game`. For a list of all stride templates, use this command:
+
+    ```bash
+    dotnet new list --tag stride
+    ```
+
+3. Create the project
+
+    ```bash
+    dotnet new stride-game -n NameOfGame
+    ```
+
+All Stride templates can take additional parameters to change how they are created. Here's a list of the most commonly used ones:
+
+| Parameter | Values | Description |
+| :-- | :-- | :-- |
+| `-n` | text | Name of the project. |
+| `--platform` | `host` (the current os), `window`, `linux`, `macos`, `android`, `ios` | Platform(s) the project should target, separated by the `|` character. |
+| `--HDR` | `true`, `false` | Determines if the project uses HDR (required graphics profile >= 10.0). |
+| `--graphics-profile` | `9.0`, `10.0`, `11.0` | The graphics profile to use. This can be changed later. |
+| `--orientation` | `Default`, `LandscapeLeft`, `LandscapeRight`, `Portrait` | The game's orientation on mobile devices. This can be changed later. |
+
+For a list of all available parameters in a template, use `dotnet new NameOfTemplate --help`.
+
+Example command:
+
+### [Powershell (Windows)](#tab/powershell)
+
+```powershell
+dotnet new stride-game -n ProjectX --HDR true --platform windows`|linux
+```
+
+### [Bash (Linux)](#tab/bash)
+
+```bash
+dotnet new stride-game -n ProjectX --HDR true --platform windows\|linux
+```
+
+---

@@ -21,7 +21,7 @@ This method automatically creates a new entity that contains the script.
 
 1. In the **solution explorer** (in the bottom left by default), select the assembly that contains your script. Game Studio shows your script in the **asset view**.
 
-    ![Script in asset folder](../get-started/media/create-a-script-new-script-asset-view.png)
+    ![Script in asset folder](media/create-a-script-new-script-asset-view.png)
 
 2. Drag the script from the asset view to the **entity tree**.
 
@@ -35,7 +35,7 @@ Game Studio adds an entity to your scene, with the script as a component on the 
 
 2. In the **solution explorer** (in the bottom left by default), select the assembly that contains your script. Game Studio shows your script in the **asset view**.
 
-    ![Script in asset folder](../get-started/media/create-a-script-new-script-asset-view.png)
+    ![Script in asset folder](media/create-a-script-new-script-asset-view.png)
 
 3. Drag the script from the **asset view** to the **property grid**.
    
@@ -78,7 +78,7 @@ myEntity.Add(new myAsyncScript());
 
 ## See also
 
-* [Types of script](types-of-script.md)
+* [Types of script](types-of-script/index.md)
 * [Create a script](create-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)

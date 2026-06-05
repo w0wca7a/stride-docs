@@ -4,13 +4,13 @@
 
 With the **Stride launcher**, you can install, manage and run different versions of Stride.
 
-![Stride launcher](../get-started/media/stride-launcher-interface.webp)
+![Stride launcher](media/stride-launcher-interface.webp)
 
 ## Install the latest Stride version
 
 If you don't have Stride installed, the Stride Launcher prompts you to install the latest version.
 
-![No version installed](../get-started/media/stride-launcher-install-latest-version-prompt.webp)
+![No version installed](../install-and-update/media/stride-launcher-install-latest-version-prompt.webp)
 
 You can install other versions of Stride in the **Switch/update version** section (**2**). To do this, click the **install** icon next to the version in the list.
 
@@ -18,7 +18,7 @@ You can install other versions of Stride in the **Switch/update version** sectio
 
 If you choose to install the latest version of Stride, the Stride Launcher asks if you want to install the Visual Studio extension.
 
-![Install Visual Studio integration](../get-started/media/install-VS-plug-in-prompt.webp)
+![Install Visual Studio integration](../install-and-update/media/install-VS-plug-in-prompt.webp)
 
 The Visual Studio extension lets you edit shaders directly from Visual Studio, and provides syntax highlighting, live code analysis with validation, error checking, and navigation (jump to definition). Installing the extension isn't mandatory, but we recommend it.
 
@@ -34,7 +34,7 @@ To choose which version of Stride runs, select it in the list under **Switch/upd
 
 You can install and uninstall multiple versions of Stride from the **Switch/update version** section.
 
-![Manage versions of Stride](../get-started/media/stride-launcher-various-versions.webp)
+![Manage versions of Stride](media/stride-launcher-various-versions.webp)
 
 You might need to use an older version of Stride to work with old projects. Newer versions of Stride might contain changes that require old projects to be upgraded.
 
